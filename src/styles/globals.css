@@ -1,0 +1,333 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --background: #fef7ff;
+  --foreground: #1a1a1a;
+  --card: rgba(255, 255, 255, 0.8);
+  --card-foreground: #1a1a1a;
+  --popover: rgba(255, 255, 255, 0.95);
+  --popover-foreground: #1a1a1a;
+  --primary: #ec4899;
+  --primary-foreground: #ffffff;
+  --secondary: rgba(236, 72, 153, 0.1);
+  --secondary-foreground: #1a1a1a;
+  --muted: rgba(236, 72, 153, 0.05);
+  --muted-foreground: #6b7280;
+  --accent: rgba(236, 72, 153, 0.15);
+  --accent-foreground: #1a1a1a;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(236, 72, 153, 0.2);
+  --input: rgba(255, 255, 255, 0.8);
+  --input-background: rgba(255, 255, 255, 0.9);
+  --switch-background: rgba(236, 72, 153, 0.3);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: rgba(236, 72, 153, 0.5);
+  --chart-1: #ec4899;
+  --chart-2: #f97316;
+  --chart-3: #06b6d4;
+  --chart-4: #8b5cf6;
+  --chart-5: #10b981;
+  --radius: 1rem;
+  --sidebar: rgba(255, 255, 255, 0.8);
+  --sidebar-foreground: #1a1a1a;
+  --sidebar-primary: #ec4899;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(236, 72, 153, 0.1);
+  --sidebar-accent-foreground: #1a1a1a;
+  --sidebar-border: rgba(236, 72, 153, 0.2);
+  --sidebar-ring: rgba(236, 72, 153, 0.5);
+  
+  /* Additional color palette */
+  --blue: #3b82f6;
+  --blue-light: rgba(59, 130, 246, 0.1);
+  --purple: #8b5cf6;
+  --purple-light: rgba(139, 92, 246, 0.1);
+  --teal: #14b8a6;
+  --teal-light: rgba(20, 184, 166, 0.1);
+  --orange: #f97316;
+  --orange-light: rgba(249, 115, 22, 0.1);
+  --indigo: #6366f1;
+  --indigo-light: rgba(99, 102, 241, 0.1);
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --card: rgba(20, 20, 20, 0.8);
+  --card-foreground: #ffffff;
+  --popover: rgba(20, 20, 20, 0.95);
+  --popover-foreground: #ffffff;
+  --primary: #ec4899;
+  --primary-foreground: #000000;
+  --secondary: rgba(236, 72, 153, 0.15);
+  --secondary-foreground: #ffffff;
+  --muted: rgba(236, 72, 153, 0.1);
+  --muted-foreground: #9ca3af;
+  --accent: rgba(236, 72, 153, 0.2);
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(236, 72, 153, 0.3);
+  --input: rgba(20, 20, 20, 0.8);
+  --input-background: rgba(20, 20, 20, 0.9);
+  --switch-background: rgba(236, 72, 153, 0.4);
+  --ring: rgba(236, 72, 153, 0.6);
+  --chart-1: #ec4899;
+  --chart-2: #f97316;
+  --chart-3: #06b6d4;
+  --chart-4: #8b5cf6;
+  --chart-5: #10b981;
+  --sidebar: rgba(20, 20, 20, 0.8);
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #ec4899;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: rgba(236, 72, 153, 0.15);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(236, 72, 153, 0.3);
+  --sidebar-ring: rgba(236, 72, 153, 0.6);
+  
+  /* Dark mode additional colors */
+  --blue: #60a5fa;
+  --blue-light: rgba(96, 165, 250, 0.15);
+  --purple: #a78bfa;
+  --purple-light: rgba(167, 139, 250, 0.15);
+  --teal: #5eead4;
+  --teal-light: rgba(94, 234, 212, 0.15);
+  --orange: #fb923c;
+  --orange-light: rgba(251, 146, 60, 0.15);
+  --indigo: #818cf8;
+  --indigo-light: rgba(129, 140, 248, 0.15);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-blue: var(--blue);
+  --color-blue-light: var(--blue-light);
+  --color-purple: var(--purple);
+  --color-purple-light: var(--purple-light);
+  --color-teal: var(--teal);
+  --color-teal-light: var(--teal-light);
+  --color-orange: var(--orange);
+  --color-orange-light: var(--orange-light);
+  --color-indigo: var(--indigo);
+  --color-indigo-light: var(--indigo-light);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Glassmorphism utilities */
+.glass {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: var(--card);
+  border: 1px solid var(--border);
+}
+
+.glass-strong {
+  backdrop-filter: blur(20px) saturate(200%);
+  background-color: var(--card);
+  border: 1px solid var(--border);
+}
+
+/* Glass text effect */
+.glass-text {
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.2));
+  backdrop-filter: blur(10px) saturate(120%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
+  border: 1px solid rgba(255,255,255,0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Gradient text utilities */
+.gradient-text-primary {
+  background: linear-gradient(135deg, var(--primary), #db2777, var(--primary));
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-flow 3s ease-in-out infinite;
+}
+
+.gradient-text-multi {
+  background: linear-gradient(135deg, var(--primary), var(--blue), var(--purple), var(--teal));
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-flow 4s ease-in-out infinite;
+}
+
+@keyframes gradient-flow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--primary) 80%, transparent);
+}
+
+/* Color-specific tag utilities */
+.tag-blue {
+  background-color: var(--blue-light);
+  color: var(--blue);
+  border: 1px solid color-mix(in srgb, var(--blue) 30%, transparent);
+}
+
+.tag-purple {
+  background-color: var(--purple-light);
+  color: var(--purple);
+  border: 1px solid color-mix(in srgb, var(--purple) 30%, transparent);
+}
+
+.tag-teal {
+  background-color: var(--teal-light);
+  color: var(--teal);
+  border: 1px solid color-mix(in srgb, var(--teal) 30%, transparent);
+}
+
+.tag-orange {
+  background-color: var(--orange-light);
+  color: var(--orange);
+  border: 1px solid color-mix(in srgb, var(--orange) 30%, transparent);
+}
+
+.tag-indigo {
+  background-color: var(--indigo-light);
+  color: var(--indigo);
+  border: 1px solid color-mix(in srgb, var(--indigo) 30%, transparent);
+}
+
+.tag-pink {
+  background-color: rgba(236, 72, 153, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(236, 72, 153, 0.2);
+}
