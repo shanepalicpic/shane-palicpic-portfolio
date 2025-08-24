@@ -6,6 +6,7 @@ import { AboutSection } from "./components/AboutSection";
 import { ExperienceSection } from "./components/ExperienceSection";
 import { ProjectsSection } from "./components/ProjectsSection";
 import { ContactSection } from "./components/ContactSection";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <ProjectsSection />
         <ContactSection />
       </main>
+      <Analytics />
     </div>
   );
 }
