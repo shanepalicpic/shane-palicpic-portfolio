@@ -80,7 +80,7 @@ export function Header() {
               className="glass border-primary/30 hover:border-primary/50 font-medium"
               onClick={() => {
                 window.open(
-                  "https://drive.google.com/file/d/1VSmntlYEKb9Za46FIM_HfcrL5HcKH8Kc/view?usp=sharing",
+                  "https://drive.google.com/file/d/1iFSjp3JO0lVRX8lPVyHs-1pbmQeMfA9u/view?usp=sharing",
                   "_blank"
                 );
               }}
